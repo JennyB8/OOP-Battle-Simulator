@@ -13,8 +13,11 @@ def main():
     goblin = Goblin("Bibble")
 
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
+    
+    goblinTwo = Goblin("Wiggle")
+
+    print(f"{goblinTwo.name} enters the arena with {goblinTwo.health} health.")
+
     print("But no hero has answered the call... yet.")
-
-
 if __name__ == "__main__":
     main()

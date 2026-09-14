@@ -1,4 +1,6 @@
+from hero import Hero
 from goblin import Goblin
+
 
 
 ARENA_NAME = "The Iron Circle"
@@ -18,6 +20,13 @@ def main():
 
     print(f"{goblinTwo.name} enters the arena with {goblinTwo.health} health.")
 
-    print("But no hero has answered the call... yet.")
+    Rowan = Hero("Rowan")
+
+    print(f"{Rowan.name} enters the arena with {Rowan.health} health.")
+
+    heroDamage = Rowan.attack()
+
+    goblin.take_damage(heroDamage)
+
 if __name__ == "__main__":
     main()

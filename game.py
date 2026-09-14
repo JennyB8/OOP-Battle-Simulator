@@ -22,7 +22,7 @@ def main():
 
     Rowan = Hero("Rowan")
 
-    print(f"{Rowan.name} enters the arena with {Rowan.health} health.")
+    print(f"{Rowan.name} the {Rowan.role} enters the arena with {Rowan.health} health.")
 
     heroDamage = Rowan.attack()
 

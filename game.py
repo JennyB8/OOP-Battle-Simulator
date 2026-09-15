@@ -4,6 +4,21 @@ from goblin import Goblin
 
 
 ARENA_NAME = "The Iron Circle"
+def battle(hero: Hero, enemy: Goblin):
+    while hero.is_alive() and enemy.is_alive():
+        hero.damage = hero.attck()
+        enemy.take_damage(hero.damage)
+        if enemy.is_alive():
+            enemy_damage = enemy.attack()
+            hero.take_damage(enemy_damage)
+
+    if hero.is_alive():
+        print(f"(hero.name) wins!")
+    else:
+         print(f"(enemy.name) wins!")
+
+
+
 
 
 def main():
@@ -22,7 +37,7 @@ def main():
 
     Rowan = Hero("Rowan")
 
-    print(f"{Rowan.name} the {Rowan.role} enters the arena with {Rowan.health} health.")
+    print(f"Oh my goodness {Rowan.name} the {Rowan.role} enters the arena with {Rowan.health} health!!")
 
     heroDamage = Rowan.attack()
 

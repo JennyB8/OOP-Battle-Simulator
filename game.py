@@ -1,5 +1,6 @@
 from hero import Hero
 from goblin import Goblin
+from boss import Boss
 
 
 
@@ -42,6 +43,8 @@ def main():
     heroDamage = Rowan.attack()
 
     goblin.take_damage(heroDamage)
+
+    bossGuy = Boss("Phil")
 
 if __name__ == "__main__":
     main()
